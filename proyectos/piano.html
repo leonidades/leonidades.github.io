@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/piano.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<ul class="set">
+    <li class="white e" onclick="reproducir('66.mp3')"></li>
+    <li class="black ds" onclick="reproducir('67.mp3')"></li>
+    <li class="white d" onclick="reproducir('68.mp3')"></li>
+    <li class="black cs" onclick="reproducir('69.mp3')"></li>
+    <li class="white c" onclick="reproducir('70.mp3')"></li>
+    <li class="white b" onclick="reproducir('71.mp3')"></li>
+    <li class="black as" onclick="reproducir('72.mp3')"></li>
+    <li class="white a" onclick="reproducir('73.mp3')"></li>
+    <li class="black gs" onclick="reproducir('74.mp3')"></li>
+    <li class="white g" onclick="reproducir('75.mp3')"></li>
+    <li class="black fs" onclick="reproducir('76.mp3')"></li>
+    <li class="white f" onclick="reproducir('77.mp3')"></li>
+  </ul>
+
+  <script>
+      function CargarSonido (archivo) {
+    let sonido = document.createElement("audio");
+    sonido.src = "../resources/audio/"+archivo;
+    sonido.setAttribute("preload", "auto");
+    sonido.style.display = "none";
+    document.body.appendChild(sonido);
+    return sonido;
+}
+
+    function reproducir(nota_archivo) {
+        let sonido=CargarSonido(nota_archivo);
+        sonido.play();
+    }
+  </script>

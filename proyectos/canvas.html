@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/canvas.css" rel="stylesheet" />
+    <title>canvas</title>
+</head>
+<body onload="cargarcanvas()">
+    <canvas id="linea1" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="cuadrado" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="circulo" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="triangulo" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="linea4" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="linea2" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="linea3" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    <canvas id="micanvas" width="450" height="400">
+        Este navegador no soporta canvas. Prueba con otro navegador o vuele al porfolio de Leo.
+    </canvas>
+    
+</body>
+</html>
+<script>
+    function cargarcanvas(){
+        linea1();
+        cuadrado();
+        circulo();
+        triangulo();
+        linea4();
+        linea3();
+        linea2();
+      }
+      function linea1() {
+        let micanvas= document.getElementById("linea1");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        //linea1
+        lienzo.moveTo(225,0);
+        lienzo.lineTo(225,135);
+        lienzo.stroke();
+        }
+
+        function cuadrado() {
+        let micanvas= document.getElementById("cuadrado");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+        //cuadrado
+        lienzo.strokeRect(127,180,195,170);
+        lienzo.stroke();
+        }
+
+        function circulo() {
+        let micanvas= document.getElementById("circulo");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+        //circulo
+        lienzo.arc(225, 265, 131, 0, 2 * Math.PI);
+        lienzo.stroke();
+        }
+
+        function triangulo() {
+        let micanvas= document.getElementById("triangulo");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+         //triangulo
+         lienzo.moveTo(0,400);
+        lienzo.lineTo(225,0);
+        lienzo.lineTo(450,400);
+        lienzo.lineTo(0,400);
+        lienzo.stroke();
+        }
+
+        function linea4() {
+        let micanvas= document.getElementById("linea4");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+         //linea4
+        lienzo.moveTo(225,400);
+        lienzo.lineTo(225,135);
+        lienzo.stroke();    
+        }
+        function linea2() {
+        let micanvas= document.getElementById("linea2");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+         //linea2
+        lienzo.moveTo(0,400);
+        lienzo.lineTo(225,135);
+        lienzo.stroke();    
+        }
+        function linea3() {
+        let micanvas= document.getElementById("linea3");
+        let lienzo = micanvas.getContext("2d");
+        lienzo.strokeStyle="#eee";
+        lienzo.lineWidth=4;
+        
+         //linea3
+        lienzo.moveTo(450,400);
+        lienzo.lineTo(225,135);
+        lienzo.stroke();   
+        }
+
+</script>
